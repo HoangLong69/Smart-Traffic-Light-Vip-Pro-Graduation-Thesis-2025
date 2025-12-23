@@ -508,11 +508,12 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 
 ### ⭐ If you find this project useful, please give it a star!
 
-![Thank You](./images/thank_you.png)
+![Thank You](images/thank-you-png-icon-17616.png)
 <!-- Replace with a thank you image or animation -->
 
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
