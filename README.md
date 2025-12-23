@@ -6,10 +6,32 @@
 
 > An AI-powered traffic management system that optimizes multi-intersection signal timing using Deep Q-Network (DQN) and real-time vehicle detection.
 
+---
 
-Eureka Student Scientific Research Award (University Level - 10/2025)
+## 🏆 Awards & Publications
+
+### **Awards**
+
+🥉 **Eureka 2025 Encouragement Award** - Industrial University of Ho Chi Minh City
 ![Eureka](images/IMG_3492.JPG)
-<!-- Replace with your project banner image -->
+- **Project Title**: "Design of Intelligent Traffic Light Control System Using Ethernet and YOLOv5"
+- **Recognition**: University-level research competition
+- **Year**: 2025
+
+### **Scientific Publications**
+
+#### **Journal Article (Q4)**
+
+📄 **Huu Q. Tran, Phung Quyen Linh and Tran Tham Hoang Long**, "A Smart Traffic Light Control System", *Journal of Flow Visualization and Image Processing*, 2025.
+- **DOI**: [10.1615/JFlowVisImageProc.2025059776](https://doi.org/10.1615/JFlowVisImageProc.2025059776)
+- **Indexed**: Scopus (Q4)
+- **Status**: Published
+
+#### **Conference Paper**
+
+📄 **Huu Q. Tran, Phung Quyen Linh and Tran Tham Hoang Long**, "Design of Intelligent Traffic Light Control System Using YOLOv5 and LSTM", *Fifth International Conference on Emerging Research in Electronics, Computer Science and Technology (ICERECT 2025)*, 2025.
+- **Conference**: ICERECT 2025 (International)
+- **Status**: Accepted/Presented
 
 ---
 
@@ -650,6 +672,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
