@@ -325,8 +325,8 @@ Our custom dataset focuses on **4 vehicle classes** for Vietnamese traffic condi
 **Dataset Source**: [Roboflow - Toy Vehicle Detection](https://universe.roboflow.com/camera-giao-thng/toy-vehicle-detection-jwxdt)
 
 **Dataset Statistics**:
-- **Total Images**: ~5,000+ annotated images
-- **Classes**: 4 (Car, Motorcycle, Bus, Truck)
+- **Total Images**: ~2,000+ annotated images
+- **Classes**: 4 (Car, Motorcycle, FireTruck Normal, FireTruck Urgent)
 - **Split**: 70% Train / 20% Validation / 10% Test
 - **Annotation Format**: YOLO format (txt files)
 - **Augmentations**: Flip, Rotation, Brightness, Contrast
@@ -341,24 +341,38 @@ We leveraged **Kaggle's free GPU resources** for YOLOv8 training:
 ```python
 from ultralytics import YOLO
 
-# Load pretrained YOLOv8n model
-model = YOLO('yolov8n.pt')
+model = YOLO("yolov8s.pt")
 
-# Train on custom dataset
 results = model.train(
-    data='data.yaml',
-    epochs=150,
-    imgsz=480,
-    batch=16,
-    device=0,  # GPU
-    patience=50,
-    save=True,
-    project='runs/detect',
-    name='yolov8n_vehicle'
+    data="/kaggle/input/testing/dataset_final4/data.yaml",
+    epochs=130,
+    imgsz=416,
+    batch=64,
+    device=[0,1],
+    workers=8,
+
+    optimizer="AdamW",
+    lr0=0.001,
+    weight_decay=0.0005,
+    warmup_epochs=3,
+    cos_lr=True,
+
+    freeze=10,
+    label_smoothing=0.05,
+    close_mosaic=10,
+    multi_scale=True,   # RẤT QUAN TRỌNG trong case này
+
+    amp=True,
+    cache=False,
+    plots=True,
+    augment=True,
+
+    project="/kaggle/working/runs/detect",
+    name="yolov8s_ms416"
 )
 ```
 
-**Hardware**: Kaggle P100 GPU (16GB VRAM)
+**Hardware**: 2x Kaggle T4 GPU
 
 ### **Training Results**
 
@@ -370,10 +384,10 @@ results = model.train(
 | Metric | Value | Description |
 |--------|-------|-------------|
 | **mAP@0.5** | 92.3% | Mean Average Precision at IoU 0.5 |
-| **mAP@0.5:0.95** | 68.7% | Mean Average Precision at IoU 0.5-0.95 |
-| **Precision** | 89.4% | True Positives / (TP + FP) |
-| **Recall** | 86.2% | True Positives / (TP + FN) |
-| **Inference Speed** | 45 FPS | On NVIDIA Jetson Nano (TensorRT) |
+| **mAP@0.5:0.95** | 95.7% | Mean Average Precision at IoU 0.5-0.95 |
+| **Precision** | 90.4% | True Positives / (TP + FP) |
+| **Recall** | 90.2% | True Positives / (TP + FN) |
+| **Inference Speed** | 20 FPS | On NVIDIA Jetson Nano (TensorRT) |
 
 ### **Model Export Pipeline**
 
@@ -632,6 +646,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
