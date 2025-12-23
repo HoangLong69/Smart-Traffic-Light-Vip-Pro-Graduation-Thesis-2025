@@ -45,7 +45,7 @@ A DQN-based adaptive traffic control system that:
 - **Coordinates** multiple intersections for smooth green wave progression
 - **Deploys** on a real-world GUI with hardware integration
 
-![System Overview](images/system overview.png)
+![System Overview](images/systemoverview.png)
 <!-- Replace with system architecture diagram -->
 
 ---
@@ -320,7 +320,7 @@ The model with the **lowest average waiting time** across all scenarios is selec
 - Username whitelist: `["Linh", "Long"]`
 - Password protection
 
-![Login Screen](images/login interface new-Photoroom-Photoroom.png)
+![Login Screen](images/login.png)
 <!-- Replace with login screenshot -->
 
 #### **2. Real-Time Monitoring**
@@ -331,7 +331,7 @@ The model with the **lowest average waiting time** across all scenarios is selec
 - Polygon-based counting zones
 - FPS optimization with TensorRT
 
-![Camera Monitoring](images/Screenshot from 2025-12-17 11-28-34.png)
+![Camera Monitoring](images/cameraview.png)
 <!-- Replace with camera interface screenshot -->
 
 **Key Metrics Display**
@@ -487,7 +487,7 @@ cycle:60:25
 
 This project was completed as part of our graduation thesis at **[Industrial University of Ho Chi Minh City]**.
 
-![IUH Logo](images/Logo chính thức (trắng - vàng).png)
+![IUH Logo](images/IUHLogo.png)
 <!-- Replace with actual hardware setup photo -->
 
 **Special Thanks**:
@@ -520,3 +520,4 @@ This project was completed as part of our graduation thesis at **[Industrial Uni
 **Made with ❤️ for smarter cities**
 
 </div>
+
