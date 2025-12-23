@@ -1,14 +1,15 @@
 # 🚦 Intelligent Traffic Light Control System using Deep Reinforcement Learning
 
-Eureka Student Scientific Research Award (University Level - 10/2025)
-![Eureka](images/IMG_3492.JPG)
-<!-- Replace with your project banner image -->
-
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![SUMO](https://img.shields.io/badge/SUMO-1.15+-orange.svg)](https://www.eclipse.org/sumo/)
 
 > An AI-powered traffic management system that optimizes multi-intersection signal timing using Deep Q-Network (DQN) and real-time vehicle detection.
+
+
+Eureka Student Scientific Research Award (University Level - 10/2025)
+![Eureka](images/IMG_3492.JPG)
+<!-- Replace with your project banner image -->
 
 ---
 
@@ -651,6 +652,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
