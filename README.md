@@ -435,11 +435,9 @@ Deploy on **NVIDIA Jetson Nano** for edge inference:
 
 | Model Format | Device | Inference Time | FPS | Model Size |
 |--------------|--------|----------------|-----|------------|
-| PyTorch (.pt) | Jetson Nano | ~45ms | 22 FPS | 6.2 MB |
-| ONNX (.onnx) | Jetson Nano | ~22ms | 45 FPS | 6.1 MB |
-| **TensorRT (.engine)** | **Jetson Nano** | **~5ms** | **200 FPS** | **3.8 MB** |
-
-**Conclusion**: TensorRT provides **9x speedup** compared to PyTorch, enabling real-time detection on edge devices.
+| PyTorch (.pt) | Jetson Nano | ~45ms | 4 FPS | 6.2 MB |
+| ONNX (.onnx) | Jetson Nano | ~22ms | 8 FPS | 6.1 MB |
+| **TensorRT (.engine)** | **Jetson Nano** | **~5ms** | **20 FPS** | **3.8 MB** |
 
 ---
 
@@ -646,6 +644,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
