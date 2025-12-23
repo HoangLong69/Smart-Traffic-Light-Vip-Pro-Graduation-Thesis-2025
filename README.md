@@ -41,8 +41,6 @@ Eureka Student Scientific Research Award (University Level - 10/2025)
 
 ## 🎯 Overview
 
-Urban traffic congestion is a critical challenge in modern cities, leading to increased travel time, fuel consumption, and environmental pollution. This project addresses this issue by implementing an **intelligent traffic light control system** that uses **Deep Reinforcement Learning** to optimize signal timing across multiple intersections.
-
 ### **Problem Statement**
 Traditional fixed-time traffic signals cannot adapt to dynamic traffic conditions, resulting in:
 - Long waiting times during peak hours
@@ -652,6 +650,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
