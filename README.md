@@ -603,6 +603,8 @@ cycle:60:25
 |:---:|:----------:|
 | ![Top](images/IMG_3228.JPG) | ![Bottom](images/IMG_3230.JPG) |
 
+![Hardware Demo](images/IMG_3893.JPG)
+
 ![Hardware Demo](images/IMG_3607-Photoroom.png)
 <!-- Replace with actual hardware setup photo -->
 
@@ -648,6 +650,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
