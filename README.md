@@ -1,6 +1,7 @@
 # 🚦 Intelligent Traffic Light Control System using Deep Reinforcement Learning
 
-![Project Banner](./images/banner.png)
+Eureka Student Scientific Research Award (University Level - 10/2025)
+![Eureka](images/IMG_3492.JPG)
 <!-- Replace with your project banner image -->
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -650,6 +651,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
