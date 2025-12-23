@@ -15,8 +15,8 @@
 
 | Name | Role | Contact | Email |
 |------|------|---------|---------|
-| **Trần Thẩm Hoàng Long** | DQN Development, GUI Development, Object Detection, Edge AI Deployment, PCB Designer | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) | tranthamhoanglong01@gmail.com |
-| **Phùng Quyền Linh** | Green Wave Algorithm Development, GUI Development, Hardware Integration | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/phung.quyen.linh.2024) | quyenlinh06677@gmail.com |
+| **Trần Thẩm Hoàng Long** | DQN Development, GUI Design & Development, Object Detection, Edge AI Deployment, PCB Design, Firmware Development | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) | tranthamhoanglong01@gmail.com |
+| **Phùng Quyền Linh** | Green Wave Algorithm Development, GUI Development, Hardware Integration, Firmware Development | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/phung.quyen.linh.2024) | quyenlinh06677@gmail.com |
 
 ---
 
@@ -650,6 +650,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
