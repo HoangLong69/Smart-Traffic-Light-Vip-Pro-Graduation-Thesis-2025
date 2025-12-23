@@ -476,23 +476,23 @@ cycle:60:25
 
 ## 👥 Contributors
 
-| Name | Role | Contact |
-|------|------|---------|
-| **[Trần Thẩm Hoàng Long]** | DQN Development, GUI Development, Object Detection, Edge AI Deployment, PCB Designer | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) |
-| **[Phùng Quyền Linh]** | Green Wave Algorithm Development, GUI Development, Hardware Integration | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/phung.quyen.linh.2024) |
+| Name | Role | Contact | Email |
+|------|------|---------|---------|
+| **Trần Thẩm Hoàng Long** | DQN Development, GUI Development, Object Detection, Edge AI Deployment, PCB Designer | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) | tranthamhoanglong01@gmail.com |
+| **Phùng Quyền Linh** | Green Wave Algorithm Development, GUI Development, Hardware Integration | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/phung.quyen.linh.2024) | quyenlinh06677@gmail.com |
 
 ---
 
 ## 🙏 Acknowledgments
 
-This project was completed as part of our graduation thesis at **[Industrial University of Ho Chi Minh City]**.
+This project was completed as part of our graduation thesis at **Industrial University of Ho Chi Minh City**.
 
 ![IUH Logo](images/IUHLogo.png)
 <!-- Replace with actual hardware setup photo -->
 
 **Special Thanks**:
-- **Advisor**: [Trần Quý Hữu] - For guidance and mentorship [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/Henry.Tran.1982)
-- **Faculty**: [Faculty of Electronics Technology] - For providing resources
+- **Advisor**: Trần Quý Hữu - For guidance and mentorship [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/Henry.Tran.1982)
+- **Faculty**: Faculty of Electronics Technology - For providing resources
 - **TomTom**: For traffic API access
 - **SUMO Community**: For open-source simulator
 
@@ -501,12 +501,6 @@ This project was completed as part of our graduation thesis at **[Industrial Uni
 2. Van der Pol, E., & Oliehoek, F. A. (2016). "Coordinated deep reinforcement learners for traffic light control." *NIPS*.
 3. Wei, H., et al. (2018). "IntelliLight: A Reinforcement Learning Approach for Intelligent Traffic Light Control." *KDD*.
 4. Redmon, J., & Farhadi, A. (2018). "YOLOv3: An Incremental Improvement." *arXiv*.
-
----
-
-## 📧 Contact
-
-**Email**: tranthamhoanglong01@gmail.com
 
 ---
 
@@ -520,4 +514,5 @@ This project was completed as part of our graduation thesis at **[Industrial Uni
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
