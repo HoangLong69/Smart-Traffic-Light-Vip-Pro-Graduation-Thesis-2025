@@ -244,16 +244,18 @@ The controller operates in **two distinct phases**:
 **Purpose**: Re-align nodes when timing drift exceeds threshold
 
 **Activation Condition**:
+
 $$
-\text{max}_{\forall n \in \text{nodes}} \left| C - \left| T^{\text{predicted}}_n(t) - T^{\text{old}}_n(t-1) \right| \right| > \theta_{\text{sync}}
+\max_{n \in \text{nodes}} \left| C - \left| T^{\text{pred}}_n(t) - T^{\text{old}}_n(t-1) \right| \right| > \theta_{\text{sync}}
 $$
 
 Where:
-- $T^{\text{predicted}}_n(t)$: Predicted green start time for node $n$ at cycle $t$
+- $T^{\text{pred}}_n(t)$: Predicted green start time for node $n$ at cycle $t$
 - $T^{\text{old}}_n(t-1)$: Previous predicted time from cycle $t-1$
 - $\theta_{\text{sync}}$: Adaptive synchronization threshold (base = 5s)
 
 **Adaptive Threshold**:
+
 $$
 \theta_{\text{sync}} = \theta_{\text{base}} \times \alpha_{\text{density}} \times \beta_{\text{transition}}
 $$
@@ -267,16 +269,19 @@ $$
 **BÙ/GỘP Mechanism**:
 
 For each node, compute timing deviation:
+
 $$
-\Delta_n = T^{\text{predicted}}_n - T^{\text{leader}}
+\Delta_n = T^{\text{pred}}_n - T^{\text{leader}}
 $$
 
 Decompose into cycle multiples and remainder:
+
 $$
 \Delta_n = n \cdot C + m, \quad \text{where } n = \left\lfloor \frac{\Delta_n}{C} \right\rfloor, \quad m = \Delta_n \mod C
 $$
 
 **Decision Logic**:
+
 $$
 \begin{cases}
 \text{BÙ (Short Cycle)}: & \text{if } m > \theta_{\Delta} \\
@@ -303,12 +308,15 @@ Where:
 **Purpose**: Maintain synchronized operation with uniform cycles
 
 **Activation Condition**:
+
 $$
-\text{max}_{\forall n \in \text{nodes}} \left| C - \left| T^{\text{predicted}}_n(t) - T^{\text{old}}_n(t-1) \right| \right| \leq \theta_{\text{sync}}
+\max_{n \in \text{nodes}} \left| C - \left| T^{\text{pred}}_n(t) - T^{\text{old}}_n(t-1) \right| \right| \leq \theta_{\text{sync}}
 $$
 
 **Operation**:
+
 All nodes run identical cycles:
+
 $$
 C_{\text{send}} = C, \quad G_{\text{send}} = \begin{cases}
 G_{AB} & \text{for AOB cluster} \\
@@ -320,9 +328,10 @@ $$
 1. **Cooldown Mechanism**: After SYNC phase, enforce 1-2 NORMAL cycles to prevent rapid oscillation
 2. **Consecutive SYNC Limit**: In high density, limit to 3 consecutive SYNCs (prevent instability)
 3. **Progressive Threshold**: Increase $\theta_{\text{sync}}$ with consecutive SYNC count:
-   $$
-   \theta_{\text{progressive}} = \theta_{\text{sync}} \times (1.0 + 0.3 \times N_{\text{consecutive}})
-   $$
+
+$$
+\theta_{\text{progressive}} = \theta_{\text{sync}} \times (1.0 + 0.3 \times N_{\text{consecutive}})
+$$
 
 ### **Predicted Time Calculation**
 
@@ -331,6 +340,7 @@ The controller predicts green start times for all nodes based on traffic flow di
 #### **AOB Cluster (Main Arterial)**
 
 **Direction: A → O → B**
+
 $$
 \begin{aligned}
 T_A^{\text{pred}} &= t_{\text{now}} \\
@@ -340,6 +350,7 @@ T_B^{\text{pred}} &= T_A^{\text{pred}} + T_{AO} + T_{OB} + \Delta_{CD}
 $$
 
 **Direction: B → O → A**
+
 $$
 \begin{aligned}
 T_B^{\text{pred}} &= t_{\text{now}} \\
@@ -351,11 +362,13 @@ $$
 #### **COD Cluster (Secondary Arterial)**
 
 COD cluster starts **after AOB cluster finishes** with phase shift:
+
 $$
 T_{O(\text{CD})}^{\text{pred}} = T_O^{\text{pred}} + G_{AB} + Y + \Delta_{AB}
 $$
 
 **Direction: C → O → D**
+
 $$
 \begin{aligned}
 T_C^{\text{pred}} &= \max\left(T_{O(\text{CD})}^{\text{pred}} - T_{CO} + \Delta_{AB}, \, t_{\text{now}}\right) \\
@@ -364,6 +377,7 @@ T_D^{\text{pred}} &= T_{O(\text{CD})}^{\text{pred}} + T_{OD} + \Delta_{AB}
 $$
 
 **Direction: D → O → C**
+
 $$
 \begin{aligned}
 T_D^{\text{pred}} &= \max\left(T_{O(\text{CD})}^{\text{pred}} - T_{OD} - \Delta_{AB}, \, t_{\text{now}}\right) \\
@@ -372,6 +386,7 @@ T_C^{\text{pred}} &= T_{O(\text{CD})}^{\text{pred}} + T_{CO} + \Delta_{AB}
 $$
 
 **Constraint**: Predicted times must not be in the past:
+
 $$
 T_n^{\text{pred}} \geq t_{\text{now}}, \quad \forall n \in \{\text{node\_C}, \text{node\_D}\}
 $$
@@ -404,12 +419,13 @@ traci.trafficlight.setProgramLogic(tl_id, logic)
 
 #### **1. Smart SYNC Management**
 - **Consecutive SYNC Counter**: Track consecutive SYNC phases
-  $$
-  N_{\text{consecutive}} = \begin{cases}
-  N_{\text{consecutive}} + 1 & \text{if SYNC phase} \\
-  0 & \text{if NORMAL phase}
-  \end{cases}
-  $$
+
+$$
+N_{\text{consecutive}} = \begin{cases}
+N_{\text{consecutive}} + 1 & \text{if SYNC phase} \\
+0 & \text{if NORMAL phase}
+\end{cases}
+$$
 - **Forced NORMAL Phase**: If $N_{\text{consecutive}} \geq 3$ in high density, force NORMAL for 2 cycles
 
 #### **2. Travel Time Caching**
