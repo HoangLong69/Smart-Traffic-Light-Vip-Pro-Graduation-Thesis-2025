@@ -1,5 +1,7 @@
 # 🚦 Intelligent Traffic Light Control System using Deep Reinforcement Learning
 
+**Language / Ngôn ngữ:** [English](README.md) | [Tiếng Việt](README_vietnamese.md)
+
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![SUMO](https://img.shields.io/badge/SUMO-1.15+-orange.svg)](https://www.eclipse.org/sumo/)
