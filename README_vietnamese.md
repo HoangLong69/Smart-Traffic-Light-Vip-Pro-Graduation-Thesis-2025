@@ -578,7 +578,7 @@ Dataset tùy chỉnh của chúng tôi tập trung vào **4 lớp phương tiệ
 | ![Car](images/dataset/Figure_3.28a.png) | ![Motorbike](images/dataset/Figure_3.28d.png) | ![FireTruck Normal](images/dataset/Figure_3.28b.png) | ![FireTruck Urgent](images/dataset/Figure_3.28c.png) |
 <!-- Replace with actual vehicle class images from your dataset -->
 
-**Nguồn Dataset**: [Roboflow - Toy Vehicle Detection](https://universe.roboflow.com/camera-giao-thng/toy-vehicle-detection-jwxdt)
+**Nguồn Dataset của chúng tôi**: [Roboflow - Toy Vehicle Detection](https://universe.roboflow.com/camera-giao-thng/toy-vehicle-detection-jwxdt)
 
 **Thống Kê Dataset**:
 - **Tổng Hình Ảnh**: ~2,000+ ảnh được gán nhãn
@@ -591,7 +591,7 @@ Dataset tùy chỉnh của chúng tôi tập trung vào **4 lớp phương tiệ
 
 Chúng tôi tận dụng **tài nguyên GPU miễn phí của Kaggle** để huấn luyện YOLOv8:
 
-**Notebook Huấn Luyện**: [YOLOv8 Training on Kaggle](https://www.kaggle.com/code/dustinnguyn/yolov8-training)
+**Notebook Huấn Luyện của chúng tôi**: [YOLOv8 Training on Kaggle](https://www.kaggle.com/code/dustinnguyn/yolov8-training)
 
 **Cấu Hình Huấn Luyện**:
 ```python
@@ -924,4 +924,5 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
