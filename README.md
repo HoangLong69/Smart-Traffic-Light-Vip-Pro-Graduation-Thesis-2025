@@ -205,6 +205,240 @@ reward = α × (green_wave_bonus) + β × (throughput) - γ × (waiting_time) - 
 
 ---
 
+## 🌊 Green Wave Controller Algorithm
+
+The **Green Wave Controller** is the core coordination engine that translates DQN outputs into SUMO traffic signal commands. It implements a sophisticated **BÙ/GỘP (Compensation/Consolidation)** mechanism for dynamic signal synchronization across 5 intersections.
+
+### **System Topology**
+
+```
+          node_A ←────→ node_O ←────→ node_B
+                          ↑
+                          │
+                          ↓
+          node_C ←────→ node_O ←────→ node_D
+```
+
+**Node Clusters**:
+- **AOB Cluster**: `node_A`, `node_O`, `node_B` (Main arterial)
+- **COD Cluster**: `node_C`, `node_O`, `node_D` (Secondary arterial)
+- **Central Hub**: `node_O` coordinates both clusters
+
+### **Key Parameters**
+
+| Parameter | Symbol | Description | Range |
+|-----------|--------|-------------|-------|
+| **Cycle Length** | $C$ | Total signal cycle time | 20-100s |
+| **Green Time AOB** | $G_{AB}$ | Green duration for AOB cluster | 5-40s |
+| **Green Time COD** | $G_{CD}$ | Green duration for COD cluster | $C - G_{AB} - Y$ |
+| **Yellow Time** | $Y$ | Clearance interval | 3s (constant) |
+| **Travel Times** | $T_{AO}, T_{OB}, T_{CO}, T_{OD}$ | Inter-node travel times | Dynamic |
+| **Offsets** | $\Delta_{AB}, \Delta_{CD}$ | Phase shift offsets | 2s each |
+
+### **Algorithm Phases**
+
+The controller operates in **two distinct phases**:
+
+#### **1. SYNC Phase (Synchronization Mode)**
+
+**Purpose**: Re-align nodes when timing drift exceeds threshold
+
+**Activation Condition**:
+$$
+\text{max}_{\forall n \in \text{nodes}} \left| C - \left| T^{\text{predicted}}_n(t) - T^{\text{old}}_n(t-1) \right| \right| > \theta_{\text{sync}}
+$$
+
+Where:
+- $T^{\text{predicted}}_n(t)$: Predicted green start time for node $n$ at cycle $t$
+- $T^{\text{old}}_n(t-1)$: Previous predicted time from cycle $t-1$
+- $\theta_{\text{sync}}$: Adaptive synchronization threshold (base = 5s)
+
+**Adaptive Threshold**:
+$$
+\theta_{\text{sync}} = \theta_{\text{base}} \times \alpha_{\text{density}} \times \beta_{\text{transition}}
+$$
+
+- $\alpha_{\text{density}}$: Traffic density multiplier
+  - Low: 0.8, Medium: 1.0, High: 1.3
+- $\beta_{\text{transition}}$: Smooth transition penalty
+  - After SYNC→NORMAL: 1.2 (prevent oscillation)
+  - Default: 1.0
+
+**BÙ/GỘP Mechanism**:
+
+For each node, compute timing deviation:
+$$
+\Delta_n = T^{\text{predicted}}_n - T^{\text{leader}}
+$$
+
+Decompose into cycle multiples and remainder:
+$$
+\Delta_n = n \cdot C + m, \quad \text{where } n = \left\lfloor \frac{\Delta_n}{C} \right\rfloor, \quad m = \Delta_n \mod C
+$$
+
+**Decision Logic**:
+$$
+\begin{cases}
+\text{BÙ (Short Cycle)}: & \text{if } m > \theta_{\Delta} \\
+\quad C_{\text{send}} = m & \\
+\quad G_{\text{send}} = G_{\text{base}} \times \frac{m}{C} & \\
+\\
+\text{GỘP (Long Cycle)}: & \text{if } m \leq \theta_{\Delta} \\
+\quad C_{\text{send}} = C + m & \\
+\quad G_{\text{send}} = G_{\text{base}} \times \frac{C + m}{C} &
+\end{cases}
+$$
+
+Where:
+- $\theta_{\Delta}$: BÙ/GỘP threshold = $\frac{C}{2} + 1$ (dynamic adjustment based on traffic density)
+- $G_{\text{base}}$: Base green time ($G_{AB}$ or $G_{CD}$ depending on cluster)
+- Safety constraint: $G_{\text{send}} \geq 5s$ (minimum green)
+
+**Physical Interpretation**:
+- **BÙ (Compensation)**: Use **shortened cycle** to "catch up" when lagging behind leader
+- **GỘP (Consolidation)**: Use **extended cycle** to "wait" and synchronize with next wave
+
+#### **2. NORMAL Phase (Steady-State Mode)**
+
+**Purpose**: Maintain synchronized operation with uniform cycles
+
+**Activation Condition**:
+$$
+\text{max}_{\forall n \in \text{nodes}} \left| C - \left| T^{\text{predicted}}_n(t) - T^{\text{old}}_n(t-1) \right| \right| \leq \theta_{\text{sync}}
+$$
+
+**Operation**:
+All nodes run identical cycles:
+$$
+C_{\text{send}} = C, \quad G_{\text{send}} = \begin{cases}
+G_{AB} & \text{for AOB cluster} \\
+G_{CD} & \text{for COD cluster}
+\end{cases}
+$$
+
+**Smart SYNC Management**:
+1. **Cooldown Mechanism**: After SYNC phase, enforce 1-2 NORMAL cycles to prevent rapid oscillation
+2. **Consecutive SYNC Limit**: In high density, limit to 3 consecutive SYNCs (prevent instability)
+3. **Progressive Threshold**: Increase $\theta_{\text{sync}}$ with consecutive SYNC count:
+   $$
+   \theta_{\text{progressive}} = \theta_{\text{sync}} \times (1.0 + 0.3 \times N_{\text{consecutive}})
+   $$
+
+### **Predicted Time Calculation**
+
+The controller predicts green start times for all nodes based on traffic flow direction and travel times.
+
+#### **AOB Cluster (Main Arterial)**
+
+**Direction: A → O → B**
+$$
+\begin{aligned}
+T_A^{\text{pred}} &= t_{\text{now}} \\
+T_O^{\text{pred}} &= T_A^{\text{pred}} + T_{AO} + \Delta_{CD} \\
+T_B^{\text{pred}} &= T_A^{\text{pred}} + T_{AO} + T_{OB} + \Delta_{CD}
+\end{aligned}
+$$
+
+**Direction: B → O → A**
+$$
+\begin{aligned}
+T_B^{\text{pred}} &= t_{\text{now}} \\
+T_O^{\text{pred}} &= T_B^{\text{pred}} + T_{OB} + \Delta_{CD} \\
+T_A^{\text{pred}} &= T_B^{\text{pred}} + T_{OB} + T_{AO} + \Delta_{CD}
+\end{aligned}
+$$
+
+#### **COD Cluster (Secondary Arterial)**
+
+COD cluster starts **after AOB cluster finishes** with phase shift:
+$$
+T_{O(\text{CD})}^{\text{pred}} = T_O^{\text{pred}} + G_{AB} + Y + \Delta_{AB}
+$$
+
+**Direction: C → O → D**
+$$
+\begin{aligned}
+T_C^{\text{pred}} &= \max\left(T_{O(\text{CD})}^{\text{pred}} - T_{CO} + \Delta_{AB}, \, t_{\text{now}}\right) \\
+T_D^{\text{pred}} &= T_{O(\text{CD})}^{\text{pred}} + T_{OD} + \Delta_{AB}
+\end{aligned}
+$$
+
+**Direction: D → O → C**
+$$
+\begin{aligned}
+T_D^{\text{pred}} &= \max\left(T_{O(\text{CD})}^{\text{pred}} - T_{OD} - \Delta_{AB}, \, t_{\text{now}}\right) \\
+T_C^{\text{pred}} &= T_{O(\text{CD})}^{\text{pred}} + T_{CO} + \Delta_{AB}
+\end{aligned}
+$$
+
+**Constraint**: Predicted times must not be in the past:
+$$
+T_n^{\text{pred}} \geq t_{\text{now}}, \quad \forall n \in \{\text{node\_C}, \text{node\_D}\}
+$$
+
+### **Traffic Light Program Generation**
+
+For each node, the controller generates a **4-phase traffic signal program**:
+
+| Phase | Duration | State Pattern | Description |
+|-------|----------|---------------|-------------|
+| **P0** | $G_{\text{send}}$ | `GGGGrrrrGGGGrrrr` | Primary direction green |
+| **P1** | $Y$ (3s) | `yyyyrrrryyyyrrrr` | Primary clearance (yellow) |
+| **P2** | $C_{\text{send}} - G_{\text{send}} - Y$ | `rrrrGGGGrrrrGGGG` | Secondary direction green |
+| **P3** | $Y$ (3s) | `rrrryyyyrrrryyyy` | Secondary clearance (yellow) |
+
+**SUMO TraCI Implementation**:
+```python
+phases = [
+    traci.trafficlight.Phase(int(round(green_time)), state_p0),
+    traci.trafficlight.Phase(int(round(yellow)), state_p1),
+    traci.trafficlight.Phase(int(round(green_cd)), state_p2),
+    traci.trafficlight.Phase(int(round(yellow)), state_p3),
+]
+
+logic = traci.trafficlight.Logic("dqn_greenwave", 0, 0, phases)
+traci.trafficlight.setProgramLogic(tl_id, logic)
+```
+
+### **Optimization Strategies**
+
+#### **1. Smart SYNC Management**
+- **Consecutive SYNC Counter**: Track consecutive SYNC phases
+  $$
+  N_{\text{consecutive}} = \begin{cases}
+  N_{\text{consecutive}} + 1 & \text{if SYNC phase} \\
+  0 & \text{if NORMAL phase}
+  \end{cases}
+  $$
+- **Forced NORMAL Phase**: If $N_{\text{consecutive}} \geq 3$ in high density, force NORMAL for 2 cycles
+
+#### **2. Travel Time Caching**
+- Cache travel time calculations to reduce API calls
+- Update only when significant change detected (> 10% deviation)
+
+#### **3. Smooth Transition Tracking**
+- Track last phase type (SYNC/NORMAL)
+- Apply transition penalty ($\beta_{\text{transition}} = 1.2$) to prevent rapid mode switching
+
+### **Performance Characteristics**
+
+**Strengths**:
+- ✅ **Dynamic Adaptation**: Responds to changing traffic patterns in real-time
+- ✅ **Stability**: Smart SYNC management prevents oscillation
+- ✅ **Coordination**: Maintains green wave progression across 5 nodes
+- ✅ **Robustness**: Adaptive thresholds handle various density levels
+
+**Trade-offs**:
+- ⚖️ **SYNC Overhead**: Frequent SYNCs may increase transition time
+- ⚖️ **Computational Cost**: Predicted time calculation every cycle
+- ⚖️ **Parameter Sensitivity**: Threshold tuning affects performance
+
+**Complexity**:
+- Time Complexity: $O(N)$ per cycle, where $N$ = number of nodes (5)
+- Space Complexity: $O(N)$ for state tracking
+
+---
+
 ## 📁 Project Structure
 
 ```
