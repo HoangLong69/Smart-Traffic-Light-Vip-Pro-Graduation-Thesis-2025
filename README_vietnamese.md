@@ -815,7 +815,7 @@ Triển khai trên **NVIDIA Jetson Nano** cho suy luận edge:
 
 ### **Video Minh Họa**
 
-📹 [Xem Video Demo](https://youtube.com/your-demo-video)
+📹 [Xem Video Demo](https://youtu.be/1TTsjgiU7FI)
 <!-- Replace with actual video link -->
 
 ---
@@ -924,5 +924,6 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
