@@ -390,7 +390,7 @@ $$
 **Ràng Buộc**: Thời gian dự đoán không được nằm trong quá khứ:
 
 $$
-T_n^{\text{pred}} \geq t_{\text{now}}, \quad \forall n \in \{\text{node\_C}, \text{node\_D}\}
+T_n^{\text{pred}} \geq t_{\text{now}}, \quad \forall n \in \{\mathrm{node\_C}, \mathrm{node\_D}\}
 $$
 
 ### **Tạo Chương Trình Đèn Tín Hiệu**
@@ -924,3 +924,4 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
