@@ -815,7 +815,7 @@ Deploy on **NVIDIA Jetson Nano** for edge inference:
 
 ### **Video Demonstrations**
 
-📹 [Watch Demo Video](https://youtube.com/your-demo-video)
+📹 [Watch Demo Video](https://youtu.be/1TTsjgiU7FI)
 <!-- Replace with actual video link -->
 
 ---
@@ -924,5 +924,6 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
