@@ -578,7 +578,7 @@ Our custom dataset focuses on **4 vehicle classes** for Vietnamese traffic condi
 | ![Car](images/dataset/Figure_3.28a.png) | ![Motorbike](images/dataset/Figure_3.28d.png) | ![FireTruck Normal](images/dataset/Figure_3.28b.png) | ![FireTruck Urgent](images/dataset/Figure_3.28c.png) |
 <!-- Replace with actual vehicle class images from your dataset -->
 
-**Dataset Source**: [Roboflow - Toy Vehicle Detection](https://universe.roboflow.com/camera-giao-thng/toy-vehicle-detection-jwxdt)
+**Our Dataset Source**: [Roboflow - Toy Vehicle Detection](https://universe.roboflow.com/camera-giao-thng/toy-vehicle-detection-jwxdt)
 
 **Dataset Statistics**:
 - **Total Images**: ~2,000+ annotated images
@@ -591,7 +591,7 @@ Our custom dataset focuses on **4 vehicle classes** for Vietnamese traffic condi
 
 We leveraged **Kaggle's free GPU resources** for YOLOv8 training:
 
-**Training Notebook**: [YOLOv8 Training on Kaggle](https://www.kaggle.com/code/dustinnguyn/yolov8-training)
+**Our Training Notebook**: [YOLOv8 Training on Kaggle](https://www.kaggle.com/code/dustinnguyn/yolov8-training)
 
 **Training Configuration**:
 ```python
@@ -924,4 +924,5 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
