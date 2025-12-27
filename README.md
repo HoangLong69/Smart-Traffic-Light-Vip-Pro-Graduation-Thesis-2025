@@ -390,7 +390,7 @@ $$
 **Constraint**: Predicted times must not be in the past:
 
 $$
-T_n^{\text{pred}} \geq t_{\text{now}}, \quad \forall n \in \{\text{node_C}, \text{node_D}\}
+T_n^{\text{pred}} \geq t_{\text{now}}, \quad \forall n \in \{\mathrm{node\_C}, \mathrm{node\_D}\}
 $$
 
 ### **Traffic Light Program Generation**
@@ -924,3 +924,4 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
