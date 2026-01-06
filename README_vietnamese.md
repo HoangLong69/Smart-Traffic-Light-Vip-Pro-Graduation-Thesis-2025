@@ -14,7 +14,7 @@
 
 | Tên | Vai Trò | Liên Hệ | Email |
 |------|------|---------|---------|
-| **Trần Thẩm Hoàng Long** | Phát triển DQN, Thiết kế & Phát triển GUI, Nhận diện Đối tượng, Triển khai Edge AI, Thiết kế PCB, Lập trình Firmware | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) | tranthamhoanglong01@gmail.com |
+| **Trần Thẩm Hoàng Long** | Phát triển DQN, Thiết kế & Phát triển GUI, Nhận diện Đối tượng, Triển khai Edge AI, Thiết kế PCB, Lập trình Firmware | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) [![YouTube](https://img.shields.io/badge/YouTube-red?logo=youtube)](https://www.youtube.com/@Hoangg_Longg1112) | tranthamhoanglong01@gmail.com |
 | **Phùng Quyền Linh** | Phát triển Thuật toán Green Wave, Phát triển GUI, Tích hợp Phần cứng, Lập trình Firmware | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/phung.quyen.linh.2024) | quyenlinh06677@gmail.com |
 
 ---
@@ -959,6 +959,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
