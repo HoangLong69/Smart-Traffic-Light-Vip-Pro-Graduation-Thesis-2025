@@ -857,8 +857,8 @@ cycle:60:25
 
 <table>
   <tr>
-    <td align="center"><b>Lớp Trên PCB</b></td>
-    <td align="center"><b>Lớp Dưới PCB</b></td>
+    <td align="center"><b>PCB Top Layer</b></td>
+    <td align="center"><b>PCB Bottom Layer</b></td>
   </tr>
   <tr>
     <td align="center">
@@ -958,6 +958,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
