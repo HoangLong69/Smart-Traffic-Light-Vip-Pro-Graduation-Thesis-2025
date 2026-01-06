@@ -925,6 +925,10 @@ We successfully defended our graduation thesis with an outstanding score of **9+
 - **Conference**: ICERECT 2025 (International)
 - **Status**: Accepted/Presented
 
+📄 **Huu Q. Tran, Phung Quyen Linh, Tran Tham Hoang Long and H Srikanth Kamath**, "DQN_GreenWave: An Edge-Deployed Deep Reinforcement Learning System for Coordinated Traffic Control and Green Wave Optimization", *8th International Conference on Communication, Devices and Networking*, 2026.
+- **Conference**: ICCDN 2026 (International)
+- **Status**: Accepted/Presented
+
 ---
 
 ## 🙏 Acknowledgments
@@ -958,6 +962,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
