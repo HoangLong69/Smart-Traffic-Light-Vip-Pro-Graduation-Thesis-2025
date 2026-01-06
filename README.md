@@ -874,6 +874,7 @@ cycle:60:25
 
 We successfully defended our graduation thesis with an outstanding score of **9+/10**. Our team received **bonus points** for presenting the entire defense in English, demonstrating both technical expertise and international communication skills.
 
+|:---:|:---:|
 | ![Defense Image 1](images/SauKhiBaoVe1.JPG) | ![Defense Image 2](images/SauKhiBaoVe2.JPG) |
 <!-- Replace with actual defense images -->
 
@@ -935,6 +936,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
