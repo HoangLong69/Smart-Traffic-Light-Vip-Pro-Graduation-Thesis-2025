@@ -874,9 +874,20 @@ cycle:60:25
 
 Chúng tôi đã bảo vệ thành công khóa luận tốt nghiệp với điểm số xuất sắc **9+/10**. Nhóm chúng tôi được **cộng điểm khuyến khích** vì đã thuyết trình toàn bộ buổi bảo vệ bằng tiếng Anh, thể hiện năng lực chuyên môn và khả năng giao tiếp quốc tế.
 
-| Hình Ảnh Bảo Vệ 1 | Hình Ảnh Bảo Vệ 2 |
-|:---:|:---:|
-| ![Defense Image 1](images/SauKhiBaoVe1.JPG) | ![Defense Image 2](images/SauKhiBaoVe2.JPG) |
+<table>
+  <tr>
+    <td align="center"><b>Hình Ảnh Bảo Vệ 1</b></td>
+    <td align="center"><b>Hình Ảnh Bảo Vệ 2</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/SauKhiBaoVe1.JPG" width="400" alt="Defense Image 1">
+    </td>
+    <td align="center">
+      <img src="images/SauKhiBaoVe2.JPG" width="400" alt="Defense Image 2">
+    </td>
+  </tr>
+</table>
 <!-- Thay thế bằng hình ảnh bảo vệ thực tế -->
 
 ---
@@ -937,6 +948,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
