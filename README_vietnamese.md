@@ -855,9 +855,20 @@ cycle:60:25
 3. 74HC595 dịch trạng thái LED
 4. Đèn giao thông cập nhật tương ứng
 
-| Lớp Trên PCB | Lớp Dưới PCB |
-|:---:|:----------:|
-| ![Top](images/IMG_3228.JPG) | ![Bottom](images/IMG_3230.JPG) |
+<table>
+  <tr>
+    <td align="center"><b>Lớp Trên PCB</b></td>
+    <td align="center"><b>Lớp Dưới PCB</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/IMG_3228.JPG" width="400" alt="PCB Top Layer">
+    </td>
+    <td align="center">
+      <img src="images/IMG_3230.JPG" width="400" alt="PCB Bottom Layer">
+    </td>
+  </tr>
+</table>
 
 ![Hardware Demo](images/IMG_3893.JPG)
 
@@ -948,6 +959,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
