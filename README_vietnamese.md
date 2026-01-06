@@ -922,11 +922,11 @@ Chúng tôi đã bảo vệ thành công khóa luận tốt nghiệp với đi�
 
 #### **Bài Báo Hội Nghị**
 
-📄 **Huu Q. Tran, Phung Quyen Linh and Tran Tham Hoang Long**, "Design of Intelligent Traffic Light Control System Using YOLOv5 and LSTM", *Fifth International Conference on Emerging Research in Electronics, Computer Science and Technology (ICERECT 2025)*, 2025.
+[1] **Huu Q. Tran, Phung Quyen Linh and Tran Tham Hoang Long**, "Design of Intelligent Traffic Light Control System Using YOLOv5 and LSTM", *Fifth International Conference on Emerging Research in Electronics, Computer Science and Technology (ICERECT 2025)*, 2025.
 - **Hội Nghị**: ICERECT 2025 (Quốc tế)
 - **Trạng Thái**: Đã chấp nhận/Trình bày
 
-📄 **Huu Q. Tran, Phung Quyen Linh, Tran Tham Hoang Long and H Srikanth Kamath**, "DQN_GreenWave: An Edge-Deployed Deep Reinforcement Learning System for Coordinated Traffic Control and Green Wave Optimization", *8th International Conference on Communication, Devices and Networking*, 2026.
+[2] **Huu Q. Tran, Phung Quyen Linh, Tran Tham Hoang Long and H Srikanth Kamath**, "DQN_GreenWave: An Edge-Deployed Deep Reinforcement Learning System for Coordinated Traffic Control and Green Wave Optimization", *8th International Conference on Communication, Devices and Networking*, 2026.
 - **Hội Nghị**: ICCDN 2026 (Quốc tế)
 - **Trạng Thái**: Đã chấp nhận/Trình bày
 
@@ -963,6 +963,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
