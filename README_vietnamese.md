@@ -868,6 +868,19 @@ cycle:60:25
 
 ## 🏆 Giải Thưởng & Công Bố Khoa Học
 
+### **Khóa Luận Tốt Nghiệp 2025**
+
+🎓 **Bảo Vệ Thành Công Ngày 05/01/2026**
+
+Chúng tôi đã bảo vệ thành công khóa luận tốt nghiệp với điểm số xuất sắc **9+/10**. Nhóm chúng tôi được **cộng điểm khuyến khích** vì đã thuyết trình toàn bộ buổi bảo vệ bằng tiếng Anh, thể hiện năng lực chuyên môn và khả năng giao tiếp quốc tế.
+
+| Hình Ảnh Bảo Vệ 1 | Hình Ảnh Bảo Vệ 2 |
+|:---:|:---:|
+| ![Defense Image 1](images/SauKhiBaoVe1.JPG) | ![Defense Image 2](images/SauKhiBaoVe2.JPG) |
+<!-- Thay thế bằng hình ảnh bảo vệ thực tế -->
+
+---
+
 ### **Giải Thưởng**
 
 🥉 **Giải Khuyến Khích Eureka 2025** - Trường Đại Học Công Nghiệp TP. Hồ Chí Minh
@@ -924,6 +937,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
