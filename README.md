@@ -868,6 +868,19 @@ cycle:60:25
 
 ## 🏆 Awards & Publications
 
+### **Graduate Thesis 2025**
+
+🎓 **Successfully Defended on January 5, 2026**
+
+We successfully defended our graduation thesis with an outstanding score of **9+/10**. Our team received **bonus points** for presenting the entire defense in English, demonstrating both technical expertise and international communication skills.
+
+| Defense Presentation | Defense Results |
+|:---:|:---:|
+| ![Defense Image 1](images/SauKhiBaoVe1.JPG) | ![Defense Image 2](images/SauKhiBaoVe2.JPG) |
+<!-- Replace with actual defense images -->
+
+---
+
 ### **Awards**
 
 🥉 **Eureka 2025 Encouragement Award** - Industrial University of Ho Chi Minh City
@@ -924,6 +937,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
