@@ -926,6 +926,10 @@ Chúng tôi đã bảo vệ thành công khóa luận tốt nghiệp với đi�
 - **Hội Nghị**: ICERECT 2025 (Quốc tế)
 - **Trạng Thái**: Đã chấp nhận/Trình bày
 
+📄 **Huu Q. Tran, Phung Quyen Linh, Tran Tham Hoang Long and H Srikanth Kamath**, "DQN_GreenWave: An Edge-Deployed Deep Reinforcement Learning System for Coordinated Traffic Control and Green Wave Optimization", *8th International Conference on Communication, Devices and Networking*, 2026.
+- **Hội Nghị**: ICCDN 2026 (Quốc tế)
+- **Trạng Thái**: Đã chấp nhận/Trình bày
+
 ---
 
 ## 🙏 Lời Cảm Ơn
@@ -959,6 +963,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
