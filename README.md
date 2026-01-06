@@ -855,9 +855,20 @@ cycle:60:25
 3. 74HC595 shifts LED states
 4. Traffic lights update accordingly
 
-| PCB Top Layer | PCB Bottom Layer |
-|:---:|:----------:|
-| ![Top](images/IMG_3228.JPG) | ![Bottom](images/IMG_3230.JPG) |
+<table>
+  <tr>
+    <td align="center"><b>Lớp Trên PCB</b></td>
+    <td align="center"><b>Lớp Dưới PCB</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/IMG_3228.JPG" width="400" alt="PCB Top Layer">
+    </td>
+    <td align="center">
+      <img src="images/IMG_3230.JPG" width="400" alt="PCB Bottom Layer">
+    </td>
+  </tr>
+</table>
 
 ![Hardware Demo](images/IMG_3893.JPG)
 
@@ -947,6 +958,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
