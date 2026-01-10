@@ -895,7 +895,7 @@ We successfully defended our graduation thesis with an outstanding score of **9+
       <img src="images/SauKhiBaoVe1.JPG" width="400" alt="Defense Image 1">
     </td>
     <td align="center">
-      <img src="images/IMG_4209_1.JPG" width="400" alt="Defense Image 2">
+      <img src="images/IMG_4219.JPG" width="400" alt="Defense Image 2">
     </td>
   </tr>
 </table>
@@ -962,6 +962,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
