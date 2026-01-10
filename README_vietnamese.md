@@ -895,7 +895,7 @@ Chúng tôi đã bảo vệ thành công khóa luận tốt nghiệp với đi�
       <img src="images/SauKhiBaoVe1.JPG" width="400" alt="Defense Image 1">
     </td>
     <td align="center">
-      <img src="images/SauKhiBaoVe2.JPG" width="400" alt="Defense Image 2">
+      <img src="images/IMG_4219.JPG" width="400" alt="Defense Image 2">
     </td>
   </tr>
 </table>
@@ -963,6 +963,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
