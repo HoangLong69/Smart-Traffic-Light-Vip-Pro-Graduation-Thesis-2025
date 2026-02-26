@@ -1,5 +1,7 @@
 # 🚦 Intelligent Traffic Light Control System using Deep Reinforcement Learning
 
+**My Graduation Project process video on YouTube:** [![YouTube](https://img.shields.io/badge/YouTube-red?logo=youtube)](https://youtu.be/V45ECwiy1h4)
+
 **Language / Ngôn ngữ:** [English](README.md) | [Tiếng Việt](README_vietnamese.md)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -962,6 +964,7 @@ This project was completed as part of our graduation thesis at **Industrial Univ
 **Made with ❤️ for smarter cities**
 
 </div>
+
 
 
 
