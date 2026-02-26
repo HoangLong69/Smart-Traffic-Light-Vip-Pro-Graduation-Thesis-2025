@@ -1,6 +1,7 @@
 # 🚦 Hệ Thống Điều Khiển Đèn Giao Thông Thông Minh Sử Dụng Học Tăng Cường Sâu
 
 **Video quá trình làm đồ án tốt nghiệp của tui trên YouTube:** [![YouTube](https://img.shields.io/badge/YouTube-red?logo=youtube)](https://youtu.be/V45ECwiy1h4)
+
 **Video full buổi bảo vệ 30 phút trên YouTube:** [![YouTube](https://img.shields.io/badge/YouTube-red?logo=youtube)](https://youtu.be/-jw6eR613AQ)
 
 **Language / Ngôn ngữ:** [English](README.md) | [Tiếng Việt](README_vietnamese.md)
@@ -966,6 +967,7 @@ Dự án này được hoàn thành như một phần của đồ án tốt nghi
 **Được tạo ra với ❤️ cho thành phố thông minh hơn**
 
 </div>
+
 
 
 
