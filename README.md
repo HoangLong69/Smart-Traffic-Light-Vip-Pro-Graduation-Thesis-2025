@@ -931,7 +931,7 @@ We successfully defended our graduation thesis with an outstanding score of **9+
 - **Conference**: ICCDN 2026 (International)
 - **Status**: Accepted/Presented
 
-#### **Certificates**
+#### **Certificates for Conference Papers**
 <table>
   <tr>
     <td align="center"><b>ICERECT 2025</b></td>
