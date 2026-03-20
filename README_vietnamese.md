@@ -934,6 +934,22 @@ Chúng tôi đã bảo vệ thành công khóa luận tốt nghiệp với đi�
 - **Hội Nghị**: ICCDN 2026 (Quốc tế)
 - **Trạng Thái**: Đã chấp nhận/Trình bày
 
+#### **Chứng chỉ tham gia bài báo hội nghị quốc tế**
+<table>
+  <tr>
+    <td align="center"><b>ICERECT 2025</b></td>
+    <td align="center"><b>ICCDN 2026</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/ICERECT_Certi.jpg" width="400" alt="Defense Image 1">
+    </td>
+    <td align="center">
+      <img src="images/ICCDN_Certi.jpg" width="400" alt="Defense Image 2">
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## 🙏 Lời Cảm Ơn
