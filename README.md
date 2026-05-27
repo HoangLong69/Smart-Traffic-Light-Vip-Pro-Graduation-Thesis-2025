@@ -16,7 +16,7 @@
 
 | Name | Role | Contact | Email |
 |------|------|---------|---------|
-| **Trần Thẩm Hoàng Long** | DQN Development, GUI Design & Development, Object Detection, Edge AI Deployment, PCB Design, Firmware Development | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) [![YouTube](https://img.shields.io/badge/YouTube-red?logo=youtube)](https://www.youtube.com/@Hoangg_Longg1112) | tranthamhoanglong01@gmail.com |
+| **Trần Thẩm Hoàng Long** | DQN Development, GUI Design & Development, Object Detection, Edge AI Deployment, PCB Design, Firmware Development | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/hoanglong111203) [![YouTube](https://img.shields.io/badge/YouTube-red?logo=youtube)](https://www.youtube.com/@Hoangg_Longg1112) [![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram)](https://www.instagram.com/hoangg_longg01/) | tranthamhoanglong01@gmail.com |
 | **Phùng Quyền Linh** | Green Wave Algorithm Development, GUI Development, Hardware Integration, Firmware Development | [![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/phung.quyen.linh.2024) | quyenlinh06677@gmail.com |
 
 ---
